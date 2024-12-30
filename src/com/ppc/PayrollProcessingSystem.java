@@ -8,16 +8,20 @@ import java.io.Console;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Arrays;
 
 public class PayrollProcessingSystem {
 	public static void main(String[] args) {
-		if (args.length < 1) {
-			System.out.println("Please provide at least one CSV file path.");
-			return;
-		}
 
-		String inputFilePath = args[0];
+		Scanner scanner = new Scanner(System.in);
+		String inputFilePath = scanner.nextLine();
+		if (args.length < 1) {
+			//System.out.println("Please provide at least one CSV file path.");
+			//return;
+		}
+		
+		//String inputFilePath = args[0];
 
 		FileProcessor fileProcessor = new FileProcessor();
 		try {
